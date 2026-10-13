@@ -43,7 +43,7 @@ public class Queue {
         System.out.println("\n=== Poll Order ===");
         while (!queue.isEmpty()) {
             Ticket t = queue.poll();
-            System.out.println(t.name());
+            System.out.print(t.name()+", ");
         }
  
         scannerLojin.close();
