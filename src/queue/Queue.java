@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Queue {
     record Ticket(String name, int urgency, int arrival) {}
     public static void main(String[] args) {
-        Scanner scannerLojin = new Scanner(System.in);
+        Scanner scannerLojinEstano = new Scanner(System.in);
          PriorityQueue<Ticket> queue = new PriorityQueue<>(
                 Comparator.comparingInt(Ticket::urgency)
                           .thenComparingInt(Ticket::arrival)
@@ -22,7 +22,7 @@ public class Queue {
         int arrival = 1;
         while (true) {
             System.out.print("\nTicket word: ");
-            String input = scannerLojin.nextLine().trim();
+            String input = scannerLojinEstano.nextLine().trim();
  
             if (input.equalsIgnoreCase("done")) {
                 break;
@@ -46,7 +46,7 @@ public class Queue {
             System.out.print(t.name()+", ");
         }
  
-        scannerLojin.close();
+        scannerLojinEstano.close();
     }
 }
  
